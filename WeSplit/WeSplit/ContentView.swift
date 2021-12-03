@@ -10,9 +10,11 @@ import SwiftUI
 struct ContentView: View {
     @FocusState private var amountIsFocused: Bool
     
+    @State private var saveData: [Double] = []
     @State private var checkAmount = 0.0
     @State private var numberOfPeople = 0
     @State private var tipPercentage = 20
+    
     let tipPercentages = [10, 15, 20, 25, 0]
     
     var totalPerPerson: Double {
@@ -62,6 +64,25 @@ struct ContentView: View {
                     Text(totalPlusTip, format: .currency(code: Locale.current.currencyCode ?? "USD"))
                 } header: {
                     Text("Total + Tip")
+                }
+                
+                Section{
+                    Button(action: {
+                        saveData.append(totalPlusTip)
+                        print(saveData)
+                    }) {
+                        HStack {
+                            Spacer()
+                            Text("Save Total")
+                            Spacer()
+                        }
+                    }
+                }
+                
+                Section{
+                    NavigationLink("Past Totals", destination: HistoryView(saveData: saveData))
+                } header: {
+                    Text("Check History")
                 }
             }
             
