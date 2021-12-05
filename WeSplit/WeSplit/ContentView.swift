@@ -10,12 +10,16 @@ import SwiftUI
 struct ContentView: View {
     @FocusState private var amountIsFocused: Bool
     
-    @State private var saveData: [Double] = []
-    @State private var checkAmount = 0.0
+    @State private var saveData: [Double] = readData()
+    @State private var checkAmount: Double = 0
     @State private var numberOfPeople = 0
     @State private var tipPercentage = 20
     
     let tipPercentages = [10, 15, 20, 25, 0]
+    
+    var tipAmmount: Double {
+        checkAmount * (Double(tipPercentage)/100)
+    }
     
     var totalPerPerson: Double {
         let people = Double(numberOfPeople + 2)
@@ -46,12 +50,25 @@ struct ContentView: View {
                 
                 Section {
                     Picker("Tip percentage", selection: $tipPercentage) {
-                        ForEach(0 ..< 101) {
+                        ForEach(tipPercentages, id: \.self) {
                             Text($0, format: .percent)
                         }
                     }
+                    .pickerStyle(.segmented)
                 } header: {
                     Text("How much tip do you want to leave?")
+                }
+                
+                Section{
+                    Text(tipAmmount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                } header: {
+                    Text("Tip")
+                }
+                
+                Section{
+                    Text(totalPlusTip, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                } header: {
+                    Text("Total + Tip")
                 }
                 
                 Section {
@@ -61,15 +78,9 @@ struct ContentView: View {
                 }
                 
                 Section{
-                    Text(totalPlusTip, format: .currency(code: Locale.current.currencyCode ?? "USD"))
-                } header: {
-                    Text("Total + Tip")
-                }
-                
-                Section{
                     Button(action: {
                         saveData.append(totalPlusTip)
-                        print(saveData)
+                        writeData(saveData)
                     }) {
                         HStack {
                             Spacer()
@@ -77,12 +88,7 @@ struct ContentView: View {
                             Spacer()
                         }
                     }
-                }
-                
-                Section{
-                    NavigationLink("Past Totals", destination: HistoryView(saveData: saveData))
-                } header: {
-                    Text("Check History")
+                    NavigationLink("Past Totals", destination: HistoryView(saveData: $saveData))
                 }
             }
             

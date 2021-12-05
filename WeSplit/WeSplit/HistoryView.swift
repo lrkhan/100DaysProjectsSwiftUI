@@ -8,13 +8,45 @@
 import SwiftUI
 
 struct HistoryView: View {
-    var saveData: [Double] = []
+    @Binding var saveData: [Double]
     
     var body: some View {
         Form{
             Section{
-                ForEach(0..<saveData.count){i in
-                    Text(saveData[i], format: .currency(code: Locale.current.currencyCode ?? "USD") )
+                Button(action: {
+                    saveData.removeAll()
+                    writeData(saveData)
+                }) {
+                    HStack{
+                        Spacer()
+                        Text("Clear All")
+                            .foregroundColor(Color.red)
+                        Spacer()
+                    }
+                }
+            }
+            
+            Section{
+                if !saveData.isEmpty{
+                    ForEach(0..<saveData.count){i in
+                        Text(saveData[i], format: .currency(code: Locale.current.currencyCode ?? "USD") )
+                    }
+                } else {
+                    VStack {
+                        HStack {
+                            Spacer()
+                            Text("Nothing to See Here")
+                                .padding(/*@START_MENU_TOKEN@*/.bottom/*@END_MENU_TOKEN@*/)
+                            Spacer()
+                        }
+                        Spacer()
+                        Text(flandersQuote[Int.random(in: 0..<flandersQuote.count)])
+                            .multilineTextAlignment(.center)
+                        HStack {
+                            Spacer()
+                            Text("- Ned Flanders")
+                        }
+                    }
                 }
             }
         }
@@ -24,8 +56,8 @@ struct HistoryView: View {
 
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        let saveDataTemp: [Double] = [2.5, 1.0, 55.4]
+        let tempData: [Double] = []
         
-        HistoryView(saveData: saveDataTemp)
+        HistoryView(saveData: .constant(tempData))
     }
 }
