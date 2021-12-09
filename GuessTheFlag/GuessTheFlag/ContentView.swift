@@ -47,7 +47,7 @@ struct ContentView: View {
                     
                     ForEach(0..<3) { number in
                         Button {
-                            flagTapped(number, county: countries[number])
+                            flagTapped(number, country: countries[number])
                         } label: {
                             Image(countries[number])
                                 .renderingMode(.original)
@@ -101,12 +101,12 @@ struct ContentView: View {
         gamesPlayed += 1
     }
     
-    func flagTapped(_ number: Int, county: String) {
+    func flagTapped(_ number: Int, country: String) {
         if number == correctAnswer {
             scoreTitle = "Correct"
             userScore += 1
         } else {
-            scoreTitle = "Wrong! That's the flag of \(county)"
+            scoreTitle = "Wrong! That's the flag of \(country)"
             if userScore > 0 {
                 userScore -= 1
             }
