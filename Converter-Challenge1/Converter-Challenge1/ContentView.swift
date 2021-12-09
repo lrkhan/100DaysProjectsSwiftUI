@@ -22,7 +22,7 @@ struct ContentView: View {
                     HStack {
                         TextField("temperature", value: $userMeasurement, format: .number)
                             .keyboardType(.decimalPad)
-                        .focused($userInputFocued)
+                            .focused($userInputFocued)
                         
                         Picker("User Temperature Units", selection: $userUnits) {
                             ForEach(temperatureUnits, id: \.self) {
@@ -34,9 +34,7 @@ struct ContentView: View {
                 }
                 
                 Section{
-                    HStack {
-                        Text((tempVal(userValue: userMeasurement, userUnits: userUnits, desiredUnits: convertUnits)), format: .number)
-                    }
+                    Text((tempVal(userValue: userMeasurement, userUnits: userUnits, desiredUnits: convertUnits)), format: .number)
                 } header: {
                     Text("Converted Temperature")
                 }
@@ -61,7 +59,7 @@ struct ContentView: View {
                     }
                 }
             }
-
+            
         }
     }
 }
