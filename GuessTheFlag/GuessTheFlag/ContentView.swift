@@ -19,6 +19,11 @@ struct ContentView: View {
     
     private var gameLimit = 3
     
+    func FlagImage(country: String) -> some View {
+        let img = Image(country).renderingMode(.original).clipShape(Capsule()).shadow(radius: 5)
+        return img
+    }
+    
     var body: some View {
         ZStack {
             
@@ -49,10 +54,7 @@ struct ContentView: View {
                         Button {
                             flagTapped(number, country: countries[number])
                         } label: {
-                            Image(countries[number])
-                                .renderingMode(.original)
-                                .clipShape(Capsule())
-                                .shadow(radius: 5)
+                            FlagImage(country: countries[number])
                         }
                         .alert(scoreTitle, isPresented: $showingScore) {
                             if gamesPlayed < gameLimit {
