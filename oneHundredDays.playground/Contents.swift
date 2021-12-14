@@ -795,3 +795,4 @@ print("Random number from nil array: \(getRandom(array: empty))")
 
 // completed the basics of swift on 2021-12-01
 // continuing with project based milestones
+
