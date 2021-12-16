@@ -58,8 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				98CA04E027593B3B007D119A /* WeSplitApp.swift */,
-				98CA04E227593B3B007D119A /* ContentView.swift */,
 				98AC7405275A55BC000A4174 /* HistoryView.swift */,
+				98CA04E227593B3B007D119A /* ContentView.swift */,
 				9809A028275A646100990078 /* Data.swift */,
 				98A8657B275F9611006152C2 /* pastData.json */,
 				98CA04E427593B3B007D119A /* Assets.xcassets */,

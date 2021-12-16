@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var animationAmount = 0.0
+    
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
     @State private var correctAnswer = Int.random(in: 0...2)
+    
+    @State private var isTapped = false
+    @State private var tappedFlag = -1
     
     @State private var showingScore = false
     @State private var scoreTitle = ""
@@ -21,6 +26,7 @@ struct ContentView: View {
     
     func FlagImage(country: String) -> some View {
         let img = Image(country).renderingMode(.original).clipShape(Capsule()).shadow(radius: 5)
+        
         return img
     }
     
@@ -52,10 +58,15 @@ struct ContentView: View {
                     
                     ForEach(0..<3) { number in
                         Button {
+                            tappedFlag = number
                             flagTapped(number, country: countries[number])
                         } label: {
-                            FlagImage(country: countries[number])
+                            withAnimation{
+                                FlagImage(country: countries[number])
+                            }
                         }
+                        .rotation3DEffect(.degrees(number == self.tappedFlag ? animationAmount:0), axis: (x: 0, y: 1, z: 0))
+                        .opacity(showingScore && (number != self.tappedFlag) ? 0.25 : 1)
                         .alert(scoreTitle, isPresented: $showingScore) {
                             if gamesPlayed < gameLimit {
                                 Button("Continue", action:askQuestion)
@@ -101,9 +112,14 @@ struct ContentView: View {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
         gamesPlayed += 1
+        tappedFlag = -1
     }
     
     func flagTapped(_ number: Int, country: String) {
+        withAnimation{
+            animationAmount += 360
+        }
+        
         if number == correctAnswer {
             scoreTitle = "Correct"
             userScore += 1
