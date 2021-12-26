@@ -11,6 +11,12 @@
 		9813FEE22772D62900136B2E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9813FEE12772D62900136B2E /* ContentView.swift */; };
 		9813FEE42772D62A00136B2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9813FEE32772D62A00136B2E /* Assets.xcassets */; };
 		9813FEE72772D62A00136B2E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9813FEE62772D62A00136B2E /* Preview Assets.xcassets */; };
+		98A433582776DDFF003C80E4 /* FlowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A433572776DDFF003C80E4 /* FlowerView.swift */; };
+		98A4335A2776DE0B003C80E4 /* ShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A433592776DE0B003C80E4 /* ShapesView.swift */; };
+		98A4335C2776E383003C80E4 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A4335B2776E383003C80E4 /* ColorView.swift */; };
+		98A4335E2776E7D2003C80E4 /* BlendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A4335D2776E7D2003C80E4 /* BlendView.swift */; };
+		98A433602778160A003C80E4 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A4335F2778160A003C80E4 /* BoardView.swift */; };
+		98A4336227781F5D003C80E4 /* SpirographView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A4336127781F5D003C80E4 /* SpirographView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		9813FEE12772D62900136B2E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9813FEE32772D62A00136B2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9813FEE62772D62A00136B2E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		98A433572776DDFF003C80E4 /* FlowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerView.swift; sourceTree = "<group>"; };
+		98A433592776DE0B003C80E4 /* ShapesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesView.swift; sourceTree = "<group>"; };
+		98A4335B2776E383003C80E4 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
+		98A4335D2776E7D2003C80E4 /* BlendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendView.swift; sourceTree = "<group>"; };
+		98A4335F2778160A003C80E4 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		98A4336127781F5D003C80E4 /* SpirographView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpirographView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +65,12 @@
 			children = (
 				9813FEDF2772D62900136B2E /* DrawingApp.swift */,
 				9813FEE12772D62900136B2E /* ContentView.swift */,
+				98A433572776DDFF003C80E4 /* FlowerView.swift */,
+				98A4335F2778160A003C80E4 /* BoardView.swift */,
+				98A4336127781F5D003C80E4 /* SpirographView.swift */,
+				98A4335B2776E383003C80E4 /* ColorView.swift */,
+				98A4335D2776E7D2003C80E4 /* BlendView.swift */,
+				98A433592776DE0B003C80E4 /* ShapesView.swift */,
 				9813FEE32772D62A00136B2E /* Assets.xcassets */,
 				9813FEE52772D62A00136B2E /* Preview Content */,
 			);
@@ -137,8 +155,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98A433602778160A003C80E4 /* BoardView.swift in Sources */,
+				98A4336227781F5D003C80E4 /* SpirographView.swift in Sources */,
 				9813FEE22772D62900136B2E /* ContentView.swift in Sources */,
+				98A433582776DDFF003C80E4 /* FlowerView.swift in Sources */,
+				98A4335A2776DE0B003C80E4 /* ShapesView.swift in Sources */,
+				98A4335E2776E7D2003C80E4 /* BlendView.swift in Sources */,
 				9813FEE02772D62900136B2E /* DrawingApp.swift in Sources */,
+				98A4335C2776E383003C80E4 /* ColorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

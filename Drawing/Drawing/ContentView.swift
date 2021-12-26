@@ -7,38 +7,30 @@
 
 import SwiftUI
 
-struct Triangle: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-
-        path.move(to: CGPoint(x: rect.midX, y: rect.minY))
-        path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
-        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
-        path.addLine(to: CGPoint(x: rect.midX, y: rect.minY))
-
-        return path
-    }
-}
-
-struct Square: Shape {
-    func path(in tri: CGRect) -> Path {
-        var path = Path()
-        
-        path.move(to: CGPoint(x: tri.minX, y: tri.minY))
-        path.addLine(to: CGPoint(x: tri.minX, y: tri.maxY))
-        path.addLine(to: CGPoint(x: tri.maxX, y: tri.maxY))
-        path.addLine(to: CGPoint(x: tri.maxX, y: tri.minY))
-        path.addLine(to: CGPoint(x: tri.minX, y: tri.minY))
-        
-        return path
-    }
-}
-
 struct ContentView: View {
+    @State private var selection = 3
     var body: some View {
-        Triangle()
-            .stroke(.red, style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
-            .frame(width: 200, height: 200)
+        TabView(selection: $selection) {
+            FlowerView().tabItem {
+                Text("Flower")
+            }.tag(1)
+            BoardView().tabItem {
+                Text("Board")
+                
+            }.tag(2)
+            SpirographView().tabItem {
+                Text("Spiro")
+                
+            }.tag(3)
+            ColorView().tabItem {
+                Text("Color")
+                
+            }.tag(4)
+            BlendView().tabItem {
+                Text("Blend")
+                
+            }.tag(5)
+        }
     }
 }
 
