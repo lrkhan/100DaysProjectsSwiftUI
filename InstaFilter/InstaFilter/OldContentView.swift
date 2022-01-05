@@ -1,13 +1,13 @@
 //
-//  ImgPickerView.swift
-//  ImageCoreProject
+//  ContentView.swift
+//  InstaFilter
 //
 //  Created by Luthfor Khan on 1/4/22.
 //
 
 import SwiftUI
 
-struct ImgPickerView: View {
+struct OldContentView: View {
     @State private var image: Image?
     @State private var inputImage: UIImage?
     @State private var showingImagePicker = false
@@ -20,6 +20,13 @@ struct ImgPickerView: View {
             
             Button("Select Image") {
                 showingImagePicker = true
+            }
+            
+            Button("Save Image") {
+                guard let inputImage = inputImage else { return }
+
+                let imageSaver = ImageSaver()
+                imageSaver.writeToPhotoAlbum(image: inputImage)
             }
         }
         .sheet(isPresented: $showingImagePicker) {
@@ -38,8 +45,8 @@ struct ImgPickerView: View {
     }
 }
 
-struct ImgPickerView_Previews: PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ImgPickerView()
+        OldContentView()
     }
 }
