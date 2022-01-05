@@ -17,6 +17,8 @@
 		98F5D99727853E9200A84189 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F5D99627853E9200A84189 /* Location.swift */; };
 		98F5D9992785D17000A84189 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F5D9982785D17000A84189 /* EditView.swift */; };
 		98F5D99B2785E28100A84189 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F5D99A2785E28100A84189 /* Results.swift */; };
+		98F5D99F2785E88D00A84189 /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F5D99E2785E88D00A84189 /* ContentView-ViewModel.swift */; };
+		98F5D9A12785F2EC00A84189 /* FileManager-DocumentDir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F5D9A02785F2EC00A84189 /* FileManager-DocumentDir.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		98F5D99627853E9200A84189 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		98F5D9982785D17000A84189 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		98F5D99A2785E28100A84189 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		98F5D99E2785E88D00A84189 /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
+		98F5D9A02785F2EC00A84189 /* FileManager-DocumentDir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentDir.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				98F5D99627853E9200A84189 /* Location.swift */,
 				98F5D98E27852D2500A84189 /* CompareView.swift */,
 				98F5D9982785D17000A84189 /* EditView.swift */,
+				98F5D99E2785E88D00A84189 /* ContentView-ViewModel.swift */,
+				98F5D9A02785F2EC00A84189 /* FileManager-DocumentDir.swift */,
 				98F5D9902785387500A84189 /* mapView.swift */,
 				98F5D99427853B2100A84189 /* faceView.swift */,
 				98F5D98427852C1100A84189 /* Assets.xcassets */,
@@ -159,9 +165,11 @@
 				98F5D99527853B2100A84189 /* faceView.swift in Sources */,
 				98F5D99B2785E28100A84189 /* Results.swift in Sources */,
 				98F5D9912785387500A84189 /* mapView.swift in Sources */,
+				98F5D99F2785E88D00A84189 /* ContentView-ViewModel.swift in Sources */,
 				98F5D98127852C1000A84189 /* BucketlistApp.swift in Sources */,
 				98F5D9992785D17000A84189 /* EditView.swift in Sources */,
 				98F5D99727853E9200A84189 /* Location.swift in Sources */,
+				98F5D9A12785F2EC00A84189 /* FileManager-DocumentDir.swift in Sources */,
 				98F5D98F27852D2500A84189 /* CompareView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
