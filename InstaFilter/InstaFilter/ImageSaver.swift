@@ -23,3 +23,15 @@ class ImageSaver: NSObject {
         }
     }
 }
+
+/*
+ Need to select Target and add permission to use camera
+ 
+ Open your target settings
+ Select the Info tab
+ Right-click on an existing option
+ Choose Add Row
+ Select “Privacy - Photo Library Additions Usage Description” for the key name..
+ Enter a reason - this will show up on the users end
+
+ */
