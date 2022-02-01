@@ -16,6 +16,7 @@
 		98608826278F0D00007662F2 /* VibrationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98608825278F0D00007662F2 /* VibrationsView.swift */; };
 		98608828278F0DA0007662F2 /* AdvVibrationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98608827278F0DA0007662F2 /* AdvVibrationsView.swift */; };
 		9860882A278F1EA7007662F2 /* HitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98608829278F1EA7007662F2 /* HitView.swift */; };
+		9864EEA927A973780029903E /* EditCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9864EEA827A973780029903E /* EditCardsView.swift */; };
 		98FB7A59279FA66E008EB389 /* RepeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB7A58279FA66E008EB389 /* RepeatView.swift */; };
 		98FB7A5B279FA807008EB389 /* AppMoveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB7A5A279FA807008EB389 /* AppMoveView.swift */; };
 		98FB7A5D279FA8CC008EB389 /* AccessibiltyEnvironmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB7A5C279FA8CC008EB389 /* AccessibiltyEnvironmentView.swift */; };
@@ -34,6 +35,7 @@
 		98608825278F0D00007662F2 /* VibrationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationsView.swift; sourceTree = "<group>"; };
 		98608827278F0DA0007662F2 /* AdvVibrationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvVibrationsView.swift; sourceTree = "<group>"; };
 		98608829278F1EA7007662F2 /* HitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitView.swift; sourceTree = "<group>"; };
+		9864EEA827A973780029903E /* EditCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCardsView.swift; sourceTree = "<group>"; };
 		98FB7A58279FA66E008EB389 /* RepeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatView.swift; sourceTree = "<group>"; };
 		98FB7A5A279FA807008EB389 /* AppMoveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMoveView.swift; sourceTree = "<group>"; };
 		98FB7A5C279FA8CC008EB389 /* AccessibiltyEnvironmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibiltyEnvironmentView.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				98608812278DCE49007662F2 /* FlashzillaApp.swift */,
 				98608814278DCE49007662F2 /* ContentView.swift */,
 				98FB7A5E279FAA4A008EB389 /* Card.swift */,
+				9864EEA827A973780029903E /* EditCardsView.swift */,
 				98FB7A60279FAB0A008EB389 /* CardView.swift */,
 				98608820278F0A39007662F2 /* Learning */,
 				98608816278DCE4A007662F2 /* Assets.xcassets */,
@@ -181,6 +184,7 @@
 				98608813278DCE49007662F2 /* FlashzillaApp.swift in Sources */,
 				98FB7A5B279FA807008EB389 /* AppMoveView.swift in Sources */,
 				9860882A278F1EA7007662F2 /* HitView.swift in Sources */,
+				9864EEA927A973780029903E /* EditCardsView.swift in Sources */,
 				98608826278F0D00007662F2 /* VibrationsView.swift in Sources */,
 				98FB7A5D279FA8CC008EB389 /* AccessibiltyEnvironmentView.swift in Sources */,
 				98608828278F0DA0007662F2 /* AdvVibrationsView.swift in Sources */,
