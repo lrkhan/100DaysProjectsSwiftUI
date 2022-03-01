@@ -17,7 +17,7 @@ extension View {
 struct ContentView: View {
     @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
     
-    //@State private var cards = [Card](repeating: Card.example, count: 10)
+    @State private var cards = [Card](repeating: Card.example, count: 10)
     
     @State private var timeRemaining = 100
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -29,7 +29,7 @@ struct ContentView: View {
     
     @State private var showingEditScreen = false
     
-    @State private var cards = [Card]()
+    //@State private var cards = [Card]()
     
     func removeCard(at index: Int) {
         guard index >= 0 else {return}
